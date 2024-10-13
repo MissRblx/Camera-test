@@ -1,3 +1,6 @@
+local newAnimationId = "16746808371"
+local animationIds = { "12447707844" }
+
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")

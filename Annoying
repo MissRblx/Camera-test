@@ -1,4 +1,4 @@
-local newAnimationId = "16746808371"
+local newAnimationId = "17106858586"
 local animationIds = { "12447707844" }
 
 local player = game.Players.LocalPlayer

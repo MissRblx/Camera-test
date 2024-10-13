@@ -32,7 +32,7 @@ local function createMangaText(parent, text)
     shadowLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     shadowLabel.BackgroundTransparency = 1
     shadowLabel.Text = text
-    shadowLabel.Font = Enum.Font.Cartoon
+    shadowLabel.Font = Enum.Font.Arcade
     shadowLabel.TextSize = 28
     shadowLabel.TextColor3 = Color3.new(0, 0, 0)  
     shadowLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
@@ -46,7 +46,7 @@ local function createMangaText(parent, text)
     textLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     textLabel.BackgroundTransparency = 1
     textLabel.Text = text
-    textLabel.Font = Enum.Font.Cartoon
+    textLabel.Font = Enum.Font.Arcade
     textLabel.TextSize = 28
     textLabel.TextColor3 = Color3.new(0, 0, 0) 
     textLabel.TextStrokeColor3 = Color3.new(1, 1, 1)
@@ -57,15 +57,19 @@ local function createMangaText(parent, text)
     return billboardGui
 end
 
-local leftText = createMangaText(cinematicGui, "YOU'RE SUCH AN ANNOYING BRAT")
+local leftText = createMangaText(cinematicGui, "*Laugh*")
+local rightText = createMangaText(cinematicGui, "You're such an annoying brat")
 
 leftText.Enabled = false
+rightText.Enabled = false
 
 local function updateTextOrientation()
     local head = character:WaitForChild("Head")
     leftText.Adornee = head
+    rightText.Adornee = head
 
     leftText.StudsOffset = Vector3.new(-6, -2, 0)  
+    rightText.StudsOffset = Vector3.new(6, -2, 0) 
 end
 
 RunService.RenderStepped:Connect(updateTextOrientation)
@@ -73,15 +77,17 @@ RunService.RenderStepped:Connect(updateTextOrientation)
 local soundEffect = Instance.new("Sound")
 soundEffect.SoundId = "rbxassetid://6537618720"
 soundEffect.Name = "NightmodeSound"
-soundEffect.Volume = 4  
+soundEffect.Volume = 15  
 soundEffect.Parent = SoundService
 
 local function showTextsAndPlaySound()
     leftText.Enabled = true
+    rightText.Enabled = true
 
     soundEffect:Play()
 
     task.delay(2, function()
         leftText.Enabled = false
+        rightText.Enabled = false
     end)
 end

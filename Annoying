@@ -91,3 +91,30 @@ local function showTextsAndPlaySound()
         rightText.Enabled = false
     end)
 end
+
+local function stopAnimations()
+    for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
+        if table.find(animationIds, track.Animation.AnimationId:match("%d+$")) then
+            track:Stop()
+        end
+    end
+end
+
+local function playNewAnimation()
+    local animation = Instance.new("Animation")
+    animation.AnimationId = "rbxassetid://" .. newAnimationId
+
+    local animationTrack = humanoid:LoadAnimation(animation)
+    animationTrack:Play()
+    animationTrack:AdjustSpeed(1)
+end
+
+local function onAnimationTrackStarted(track)
+    if table.find(animationIds, track.Animation.AnimationId:match("%d+$")) then
+        stopAnimations()
+        playNewAnimation()
+        showTextsAndPlaySound()
+    end
+end
+
+humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)

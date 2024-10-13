@@ -14,7 +14,7 @@ cinematicGui.Parent = playerGui
 
 local function createMangaText(parent, text)
     local billboardGui = Instance.new("BillboardGui")
-    billboardGui.Size = UDim2.new(0, 150, 0, 350) 
+    billboardGui.Size = UDim2.new(0, 200, 0, 200) 
     billboardGui.AlwaysOnTop = true
     billboardGui.LightInfluence = 0
     billboardGui.Parent = parent

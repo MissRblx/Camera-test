@@ -1,0 +1,84 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local playerGui = player:WaitForChild("PlayerGui")
+local RunService = game:GetService("RunService")
+local SoundService = game:GetService("SoundService")
+
+local cinematicGui = Instance.new("ScreenGui")
+cinematicGui.Name = "CinematicGui"
+cinematicGui.Parent = playerGui
+
+local function createMangaText(parent, text)
+    local billboardGui = Instance.new("BillboardGui")
+    billboardGui.Size = UDim2.new(0, 150, 0, 350) 
+    billboardGui.AlwaysOnTop = true
+    billboardGui.LightInfluence = 0
+    billboardGui.Parent = parent
+
+    local borderFrame = Instance.new("Frame")
+    borderFrame.Size = UDim2.new(1, 0, 1, 0)
+    borderFrame.BackgroundColor3 = Color3.new(1, 1, 1) 
+    borderFrame.BorderSizePixel = 5 
+    borderFrame.BorderColor3 = Color3.new(0, 0, 0)  
+    borderFrame.Parent = billboardGui
+
+    local shadowLabel = Instance.new("TextLabel")
+    shadowLabel.Size = UDim2.new(1, -20, 1, -20) 
+    shadowLabel.Position = UDim2.new(0.5, 2, 0.5, 2) 
+    shadowLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    shadowLabel.BackgroundTransparency = 1
+    shadowLabel.Text = text
+    shadowLabel.Font = Enum.Font.Finger Paint
+    shadowLabel.TextSize = 28
+    shadowLabel.TextColor3 = Color3.new(0, 0, 0)  
+    shadowLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+    shadowLabel.TextStrokeTransparency = 0.7
+    shadowLabel.TextWrapped = true
+    shadowLabel.Parent = borderFrame
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, -20, 1, -20) 
+    textLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+    textLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Text = text
+    textLabel.Font = Enum.Font.Finger Paint
+    textLabel.TextSize = 28
+    textLabel.TextColor3 = Color3.new(0, 0, 0) 
+    textLabel.TextStrokeColor3 = Color3.new(1, 1, 1)
+    textLabel.TextStrokeTransparency = 0
+    textLabel.TextWrapped = true
+    textLabel.Parent = borderFrame
+
+    return billboardGui
+end
+
+local leftText = createMangaText(cinematicGui, "YOU'RE SUCH AN ANNOYING BRAT")
+
+leftText.Enabled = false
+
+local function updateTextOrientation()
+    local head = character:WaitForChild("Head")
+    leftText.Adornee = head
+
+    leftText.StudsOffset = Vector3.new(-6, -2, 0)  
+end
+
+RunService.RenderStepped:Connect(updateTextOrientation)
+
+local soundEffect = Instance.new("Sound")
+soundEffect.SoundId = "rbxassetid://6537618720"
+soundEffect.Name = "NightmodeSound"
+soundEffect.Volume = 4  
+soundEffect.Parent = SoundService
+
+local function showTextsAndPlaySound()
+    leftText.Enabled = true
+
+    soundEffect:Play()
+
+    task.delay(2, function()
+        leftText.Enabled = false
+    end)
+end

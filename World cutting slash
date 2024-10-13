@@ -1,0 +1,11 @@
+message = "SCALE OF THE DRAGON"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+wait(2)
+message = "RECOIL"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+wait(1.2)
+message = "TWIN METEORS"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+wait(1)
+message = "WORLD CUTTING SLASH"
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")

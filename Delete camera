@@ -1,7 +1,0 @@
-local camrig = char:FindFirstChild("CameraRig")
-        if camrig then
-            camrig:Destroy()
-        end
-                if char:FindFirstChild("NoRotate") then
-                    char:FindFirstChild("NoRotate"):Destroy()
-                end

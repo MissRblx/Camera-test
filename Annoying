@@ -32,7 +32,7 @@ local function createMangaText(parent, text)
     shadowLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     shadowLabel.BackgroundTransparency = 1
     shadowLabel.Text = text
-    shadowLabel.Font = Enum.Font.Finger Paint
+    shadowLabel.Font = Enum.Font.Font { Family = rbxassetid://12187375716, Weight = Regular, Style = Normal }
     shadowLabel.TextSize = 28
     shadowLabel.TextColor3 = Color3.new(0, 0, 0)  
     shadowLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
@@ -46,7 +46,7 @@ local function createMangaText(parent, text)
     textLabel.AnchorPoint = Vector2.new(0.5, 0.5)
     textLabel.BackgroundTransparency = 1
     textLabel.Text = text
-    textLabel.Font = Enum.Font.Finger Paint
+    textLabel.Font = Enum.Font.Font { Family = rbxassetid://12187375716, Weight = Regular, Style = Normal }
     textLabel.TextSize = 28
     textLabel.TextColor3 = Color3.new(0, 0, 0) 
     textLabel.TextStrokeColor3 = Color3.new(1, 1, 1)

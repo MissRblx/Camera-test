@@ -71,7 +71,7 @@ end
 RunService.RenderStepped:Connect(updateTextOrientation)
 
 local soundEffect = Instance.new("Sound")
-soundEffect.SoundId = "rbxassetid://6537618720"
+soundEffect.SoundId = "rbxassetid://7399866274"
 soundEffect.Name = "NightmodeSound"
 soundEffect.Volume = 15  
 soundEffect.Parent = SoundService

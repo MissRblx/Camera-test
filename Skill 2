@@ -1,0 +1,344 @@
+local newAttachment = Instance.new('Attachment')
+        newAttachment.Name = 'Attachment'
+        newAttachment.Position = Vector3.new(0, 0, 0)
+        newAttachment.Orientation = Vector3.new(0, 2.636390209197998, 0)
+        newAttachment.Parent = Part
+        local particle_Shards = Instance.new('ParticleEmitter')
+        particle_Shards.Name = 'Shards'
+        particle_Shards.Acceleration = Vector3.new(0, -15, 0)
+        particle_Shards.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Shards.Drag = 10
+        particle_Shards.EmissionDirection = Enum.NormalId.Front
+        particle_Shards.Enabled = false
+        particle_Shards.Lifetime = NumberRange.new(0.30000001192092896, 0.550000011920929)
+        particle_Shards.LightEmission = 0.6000000238418579
+        particle_Shards.LightInfluence = 0
+        particle_Shards.LockedToPart = false
+        particle_Shards.Orientation = Enum.ParticleOrientation.VelocityParallel
+        particle_Shards.Rate = 0
+        particle_Shards.Rotation = NumberRange.new(90, 90)
+        particle_Shards.RotSpeed = NumberRange.new(0, 0)
+        particle_Shards.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.16117998957633972, 1.2181602716445923), NumberSequenceKeypoint.new(1, 0)})
+        particle_Shards.Speed = NumberRange.new(85, 85)
+        particle_Shards.SpreadAngle = Vector2.new(45, 45)
+        particle_Shards.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.6000000238418579), NumberSequenceKeypoint.new(1, 0.6000000238418579)})
+        particle_Shards.Texture = 'rbxassetid://10439119562'
+        particle_Shards.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Shards.VelocityInheritance = 0
+        particle_Shards.ZOffset = 1
+        particle_Shards:SetAttribute('EmitCount', 15)
+        particle_Shards.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Shards.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Shards.Parent = newAttachment
+        local particle_Wind1 = Instance.new('ParticleEmitter')
+        particle_Wind1.Name = 'Wind1'
+        particle_Wind1.Acceleration = Vector3.new(0, 0, 0)
+        particle_Wind1.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Wind1.Drag = 0
+        particle_Wind1.EmissionDirection = Enum.NormalId.Back
+        particle_Wind1.Enabled = false
+        particle_Wind1.Lifetime = NumberRange.new(0.25, 0.6499999761581421)
+        particle_Wind1.LightEmission = 0
+        particle_Wind1.LightInfluence = 0.009999999776482582
+        particle_Wind1.LockedToPart = false
+        particle_Wind1.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
+        particle_Wind1.Rate = 15
+        particle_Wind1.Rotation = NumberRange.new(-360, 360)
+        particle_Wind1.RotSpeed = NumberRange.new(0, 0)
+        particle_Wind1.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.10000000149011612, 2.2397942543029785), NumberSequenceKeypoint.new(0.20000000298023224, 3.635324239730835), NumberSequenceKeypoint.new(0.30000001192092896, 4.616043567657471), NumberSequenceKeypoint.new(0.4000000059604645, 5.335947036743164), NumberSequenceKeypoint.new(0.5, 5.871401309967041), NumberSequenceKeypoint.new(0.6000000238418579, 6.267013072967529), NumberSequenceKeypoint.new(0.699999988079071, 6.551855564117432), NumberSequenceKeypoint.new(0.800000011920929, 6.747119426727295), NumberSequenceKeypoint.new(0.8999999761581421, 6.872308731079102), NumberSequenceKeypoint.new(1, 6.971306324005127)})
+        particle_Wind1.Speed = NumberRange.new(0.008991952985525131, 0.008991952985525131)
+        particle_Wind1.SpreadAngle = Vector2.new(66666, 66666)
+        particle_Wind1.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Wind1.Texture = 'rbxassetid://13172482223'
+        particle_Wind1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.6311799883842468, 0.9223333597183228), NumberSequenceKeypoint.new(1, 1)})
+        particle_Wind1.VelocityInheritance = 0
+        particle_Wind1.ZOffset = 0.44959768652915955
+        particle_Wind1:SetAttribute('EmitCount', 4)
+        particle_Wind1.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Wind1.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Wind1.Parent = newAttachment
+        local particle_Shards = Instance.new('ParticleEmitter')
+        particle_Shards.Name = 'Shards'
+        particle_Shards.Acceleration = Vector3.new(0, -15, 0)
+        particle_Shards.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Shards.Drag = 10
+        particle_Shards.EmissionDirection = Enum.NormalId.Top
+        particle_Shards.Enabled = false
+        particle_Shards.Lifetime = NumberRange.new(0.30000001192092896, 0.550000011920929)
+        particle_Shards.LightEmission = 0.6000000238418579
+        particle_Shards.LightInfluence = 0
+        particle_Shards.LockedToPart = false
+        particle_Shards.Orientation = Enum.ParticleOrientation.VelocityParallel
+        particle_Shards.Rate = 0
+        particle_Shards.Rotation = NumberRange.new(90, 90)
+        particle_Shards.RotSpeed = NumberRange.new(0, 0)
+        particle_Shards.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.13717998564243317, 2.0059328079223633), NumberSequenceKeypoint.new(1, 0)})
+        particle_Shards.Speed = NumberRange.new(55, 55)
+        particle_Shards.SpreadAngle = Vector2.new(-360, 360)
+        particle_Shards.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.6000000238418579), NumberSequenceKeypoint.new(1, 0.6000000238418579)})
+        particle_Shards.Texture = 'rbxassetid://10439119562'
+        particle_Shards.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Shards.VelocityInheritance = 0
+        particle_Shards.ZOffset = 1
+        particle_Shards:SetAttribute('EmitCount', 15)
+        particle_Shards.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Shards.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Shards.Parent = newAttachment
+        local particle_SlashSmoke = Instance.new('ParticleEmitter')
+        particle_SlashSmoke.Name = 'SlashSmoke'
+        particle_SlashSmoke.Acceleration = Vector3.new(0, 0, 0)
+        particle_SlashSmoke.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_SlashSmoke.Drag = 15
+        particle_SlashSmoke.EmissionDirection = Enum.NormalId.Front
+        particle_SlashSmoke.Enabled = false
+        particle_SlashSmoke.Lifetime = NumberRange.new(0.5, 0.8999999761581421)
+        particle_SlashSmoke.LightEmission = 0
+        particle_SlashSmoke.LightInfluence = 0
+        particle_SlashSmoke.LockedToPart = false
+        particle_SlashSmoke.Orientation = Enum.ParticleOrientation.VelocityParallel
+        particle_SlashSmoke.Rate = 100
+        particle_SlashSmoke.Rotation = NumberRange.new(-360, 360)
+        particle_SlashSmoke.RotSpeed = NumberRange.new(0, 0)
+        particle_SlashSmoke.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 2.5683064460754395), NumberSequenceKeypoint.new(1, 4.971751689910889)})
+        particle_SlashSmoke.Speed = NumberRange.new(5, 160)
+        particle_SlashSmoke.SpreadAngle = Vector2.new(45, 45)
+        particle_SlashSmoke.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, -0.016393184661865234), NumberSequenceKeypoint.new(1, -0.6374998092651367)})
+        particle_SlashSmoke.Texture = 'rbxassetid://12350056117'
+        particle_SlashSmoke.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.1002199724316597, 0.905666708946228), NumberSequenceKeypoint.new(1, 1)})
+        particle_SlashSmoke.VelocityInheritance = 0
+        particle_SlashSmoke.ZOffset = 2
+        particle_SlashSmoke:SetAttribute('EmitDelay', 0)
+        particle_SlashSmoke:SetAttribute('EmitCount', 25)
+        particle_SlashSmoke.FlipbookFramerate = NumberRange.new(1, 1)
+        particle_SlashSmoke.FlipbookLayout = Enum.ParticleFlipbookLayout.Grid4x4
+        particle_SlashSmoke.FlipbookMode = Enum.ParticleFlipbookMode.OneShot
+        particle_SlashSmoke.FlipbookStartRandom = true
+        particle_SlashSmoke.Parent = newAttachment
+        local particle_Specs = Instance.new('ParticleEmitter')
+        particle_Specs.Name = 'Specs'
+        particle_Specs.Acceleration = Vector3.new(0, 0, 0)
+        particle_Specs.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Specs.Drag = 7
+        particle_Specs.EmissionDirection = Enum.NormalId.Top
+        particle_Specs.Enabled = false
+        particle_Specs.Lifetime = NumberRange.new(0.6000000238418579, 2.5)
+        particle_Specs.LightEmission = 0
+        particle_Specs.LightInfluence = 0
+        particle_Specs.LockedToPart = false
+        particle_Specs.Orientation = Enum.ParticleOrientation.FacingCamera
+        particle_Specs.Rate = 55
+        particle_Specs.Rotation = NumberRange.new(-360, 360)
+        particle_Specs.RotSpeed = NumberRange.new(-360, 360)
+        particle_Specs.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.1991799920797348, 0.41566669940948486), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.Speed = NumberRange.new(14.312999725341797, 85.27899932861328)
+        particle_Specs.SpreadAngle = Vector2.new(-360, 360)
+        particle_Specs.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.Texture = 'rbxassetid://13855846256'
+        particle_Specs.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.VelocityInheritance = 0
+        particle_Specs.ZOffset = 1
+        particle_Specs:SetAttribute('EmitCount', 5)
+        particle_Specs.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Specs.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Specs.Parent = newAttachment
+        local particle_Specs = Instance.new('ParticleEmitter')
+        particle_Specs.Name = 'Specs'
+        particle_Specs.Acceleration = Vector3.new(0, 0, 0)
+        particle_Specs.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.760784, 0.760784, 0.760784)), ColorSequenceKeypoint.new(1, Color3.new(0.760784, 0.760784, 0.760784))})
+        particle_Specs.Drag = 15
+        particle_Specs.EmissionDirection = Enum.NormalId.Front
+        particle_Specs.Enabled = false
+        particle_Specs.Lifetime = NumberRange.new(0.6000000238418579, 1)
+        particle_Specs.LightEmission = 1
+        particle_Specs.LightInfluence = 0
+        particle_Specs.LockedToPart = false
+        particle_Specs.Orientation = Enum.ParticleOrientation.FacingCamera
+        particle_Specs.Rate = 0
+        particle_Specs.Rotation = NumberRange.new(-360, 360)
+        particle_Specs.RotSpeed = NumberRange.new(-360, 360)
+        particle_Specs.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0, 0.5156667232513428), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.Speed = NumberRange.new(27, 145)
+        particle_Specs.SpreadAngle = Vector2.new(55, 55)
+        particle_Specs.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.Texture = 'rbxassetid://9997556038'
+        particle_Specs.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Specs.VelocityInheritance = 0
+        particle_Specs.ZOffset = 0.5
+        particle_Specs:SetAttribute('EmitCount', 25)
+        particle_Specs.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Specs.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Specs.Parent = newAttachment
+        local particle_Wind1 = Instance.new('ParticleEmitter')
+        particle_Wind1.Name = 'Wind1'
+        particle_Wind1.Acceleration = Vector3.new(0, 0, 0)
+        particle_Wind1.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Wind1.Drag = 0
+        particle_Wind1.EmissionDirection = Enum.NormalId.Back
+        particle_Wind1.Enabled = false
+        particle_Wind1.Lifetime = NumberRange.new(0.25, 0.6499999761581421)
+        particle_Wind1.LightEmission = 0
+        particle_Wind1.LightInfluence = 0.009999999776482582
+        particle_Wind1.LockedToPart = false
+        particle_Wind1.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
+        particle_Wind1.Rate = 15
+        particle_Wind1.Rotation = NumberRange.new(-360, 360)
+        particle_Wind1.RotSpeed = NumberRange.new(0, 0)
+        particle_Wind1.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.10000000149011612, 2.2397942543029785), NumberSequenceKeypoint.new(0.20000000298023224, 3.635324239730835), NumberSequenceKeypoint.new(0.30000001192092896, 4.616043567657471), NumberSequenceKeypoint.new(0.4000000059604645, 5.335947036743164), NumberSequenceKeypoint.new(0.5, 5.871401309967041), NumberSequenceKeypoint.new(0.6000000238418579, 6.267013072967529), NumberSequenceKeypoint.new(0.699999988079071, 6.551855564117432), NumberSequenceKeypoint.new(0.800000011920929, 6.747119426727295), NumberSequenceKeypoint.new(0.8999999761581421, 6.872308731079102), NumberSequenceKeypoint.new(1, 6.971306324005127)})
+        particle_Wind1.Speed = NumberRange.new(0.008991952985525131, 0.008991952985525131)
+        particle_Wind1.SpreadAngle = Vector2.new(25, 25)
+        particle_Wind1.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Wind1.Texture = 'rbxassetid://13172482223'
+        particle_Wind1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.6311799883842468, 0.9223333597183228), NumberSequenceKeypoint.new(1, 1)})
+        particle_Wind1.VelocityInheritance = 0
+        particle_Wind1.ZOffset = 0.44959768652915955
+        particle_Wind1:SetAttribute('EmitCount', 4)
+        particle_Wind1.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Wind1.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Wind1.Parent = newAttachment
+        local particle_SmokeDark = Instance.new('ParticleEmitter')
+        particle_SmokeDark.Name = 'SmokeDark'
+        particle_SmokeDark.Acceleration = Vector3.new(0, 0, 0)
+        particle_SmokeDark.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.74902, 0.74902, 0.74902)), ColorSequenceKeypoint.new(1, Color3.new(0.74902, 0.74902, 0.74902))})
+        particle_SmokeDark.Drag = 12.5
+        particle_SmokeDark.EmissionDirection = Enum.NormalId.Front
+        particle_SmokeDark.Enabled = false
+        particle_SmokeDark.Lifetime = NumberRange.new(0.4000000059604645, 1.7000000476837158)
+        particle_SmokeDark.LightEmission = 0.30000001192092896
+        particle_SmokeDark.LightInfluence = 0
+        particle_SmokeDark.LockedToPart = false
+        particle_SmokeDark.Orientation = Enum.ParticleOrientation.FacingCamera
+        particle_SmokeDark.Rate = 0
+        particle_SmokeDark.Rotation = NumberRange.new(-360, 360)
+        particle_SmokeDark.RotSpeed = NumberRange.new(-20, 20)
+        particle_SmokeDark.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.087179996073246, 3.8199639320373535), NumberSequenceKeypoint.new(1, 3.013982057571411)})
+        particle_SmokeDark.Speed = NumberRange.new(25, 95)
+        particle_SmokeDark.SpreadAngle = Vector2.new(55, 55)
+        particle_SmokeDark.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_SmokeDark.Texture = 'rbxassetid://10180479311'
+        particle_SmokeDark.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.07717999070882797, 0.8956667184829712), NumberSequenceKeypoint.new(0.6111800074577332, 0.9023333787918091), NumberSequenceKeypoint.new(1, 1)})
+        particle_SmokeDark.VelocityInheritance = 0
+        particle_SmokeDark.ZOffset = 0.800000011920929
+        particle_SmokeDark:SetAttribute('EmitDelay', 0)
+        particle_SmokeDark:SetAttribute('EmitCount', 55)
+        particle_SmokeDark.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_SmokeDark.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_SmokeDark.Parent = newAttachment
+        local particle_HalfRing1 = Instance.new('ParticleEmitter')
+        particle_HalfRing1.Name = 'HalfRing1'
+        particle_HalfRing1.Acceleration = Vector3.new(0, 0, 0)
+        particle_HalfRing1.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_HalfRing1.Drag = 5
+        particle_HalfRing1.EmissionDirection = Enum.NormalId.Front
+        particle_HalfRing1.Enabled = false
+        particle_HalfRing1.Lifetime = NumberRange.new(0.20000000298023224, 1.2000000476837158)
+        particle_HalfRing1.LightEmission = 0
+        particle_HalfRing1.LightInfluence = 0
+        particle_HalfRing1.LockedToPart = false
+        particle_HalfRing1.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
+        particle_HalfRing1.Rate = 55
+        particle_HalfRing1.Rotation = NumberRange.new(-360, 360)
+        particle_HalfRing1.RotSpeed = NumberRange.new(-100, 355)
+        particle_HalfRing1.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.037179991602897644, 8.241472244262695), NumberSequenceKeypoint.new(1, 9.852076530456543)})
+        particle_HalfRing1.Speed = NumberRange.new(0, 15.130000114440918)
+        particle_HalfRing1.SpreadAngle = Vector2.new(15, 15)
+        particle_HalfRing1.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_HalfRing1.Texture = 'rbxassetid://10316078099'
+        particle_HalfRing1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.07117999345064163, 0.8223333954811096), NumberSequenceKeypoint.new(0.285180002450943, 0.7256667017936707), NumberSequenceKeypoint.new(0.5211799740791321, 0.9356666803359985), NumberSequenceKeypoint.new(1, 1)})
+        particle_HalfRing1.VelocityInheritance = 0
+        particle_HalfRing1.ZOffset = 0
+        particle_HalfRing1:SetAttribute('EmitDelay', 0)
+        particle_HalfRing1:SetAttribute('EmitCount', 6)
+        particle_HalfRing1.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_HalfRing1.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_HalfRing1.Parent = newAttachment
+        local particle_HalfRing1 = Instance.new('ParticleEmitter')
+        particle_HalfRing1.Name = 'HalfRing1'
+        particle_HalfRing1.Acceleration = Vector3.new(0, 0, 0)
+        particle_HalfRing1.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_HalfRing1.Drag = 5
+        particle_HalfRing1.EmissionDirection = Enum.NormalId.Front
+        particle_HalfRing1.Enabled = false
+        particle_HalfRing1.Lifetime = NumberRange.new(0.30000001192092896, 0.30000001192092896)
+        particle_HalfRing1.LightEmission = 0
+        particle_HalfRing1.LightInfluence = 0
+        particle_HalfRing1.LockedToPart = false
+        particle_HalfRing1.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
+        particle_HalfRing1.Rate = 55
+        particle_HalfRing1.Rotation = NumberRange.new(-360, 360)
+        particle_HalfRing1.RotSpeed = NumberRange.new(-100, 355)
+        particle_HalfRing1.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.15517999231815338, 4.617496967315674), NumberSequenceKeypoint.new(1, 5.481792449951172)})
+        particle_HalfRing1.Speed = NumberRange.new(0, 15.130000114440918)
+        particle_HalfRing1.SpreadAngle = Vector2.new(15, 15)
+        particle_HalfRing1.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_HalfRing1.Texture = 'rbxassetid://10316078099'
+        particle_HalfRing1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.4956667125225067), NumberSequenceKeypoint.new(0.16258202493190765, 0.3423333764076233), NumberSequenceKeypoint.new(0.34858202934265137, 0.4023333787918091), NumberSequenceKeypoint.new(0.5003949999809265, 0.7437499761581421), NumberSequenceKeypoint.new(1, 1)})
+        particle_HalfRing1.VelocityInheritance = 0
+        particle_HalfRing1.ZOffset = 0
+        particle_HalfRing1:SetAttribute('EmitDelay', 0)
+        particle_HalfRing1:SetAttribute('EmitCount', 6)
+        particle_HalfRing1.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_HalfRing1.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_HalfRing1.Parent = newAttachment
+    
+        local particle_Cresent = Instance.new('ParticleEmitter')
+        particle_Cresent.Name = 'Cresent'
+        particle_Cresent.Acceleration = Vector3.new(0, 0, 0)
+        particle_Cresent.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))})
+        particle_Cresent.Drag = 0
+        particle_Cresent.EmissionDirection = Enum.NormalId.Front
+        particle_Cresent.Enabled = false
+        particle_Cresent.Lifetime = NumberRange.new(0.699999988079071, 0.699999988079071)
+        particle_Cresent.LightEmission = 1
+        particle_Cresent.LightInfluence = 0
+        particle_Cresent.LockedToPart = false
+        particle_Cresent.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
+        particle_Cresent.Rate = 5
+        particle_Cresent.Rotation = NumberRange.new(-360, 360)
+        particle_Cresent.RotSpeed = NumberRange.new(0, 0)
+        particle_Cresent.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.059179991483688354, 4.353043556213379), NumberSequenceKeypoint.new(0.17917999625205994, 5.552423000335693), NumberSequenceKeypoint.new(0.2891799807548523, 6.469595909118652), NumberSequenceKeypoint.new(0.41718000173568726, 7.104561805725098), NumberSequenceKeypoint.new(0.5751799941062927, 8.092286109924316), NumberSequenceKeypoint.new(0.6731799840927124, 9.221114158630371), NumberSequenceKeypoint.new(0.727180004119873, 11.902080535888672), NumberSequenceKeypoint.new(0.8551799654960632, 14.3008394241333), NumberSequenceKeypoint.new(0.9371799826622009, 15.006357192993164), NumberSequenceKeypoint.new(1, 14.265059471130371)})
+        particle_Cresent.Speed = NumberRange.new(0.34706932306289673, 0.34706932306289673)
+        particle_Cresent.SpreadAngle = Vector2.new(15, 15)
+        particle_Cresent.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 0)})
+        particle_Cresent.Texture = 'rbxassetid://13550153056'
+        particle_Cresent.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.5723333954811096), NumberSequenceKeypoint.new(0.6942970752716064, 1), NumberSequenceKeypoint.new(1, 1)})
+        particle_Cresent.VelocityInheritance = 0
+        particle_Cresent.ZOffset = 0
+        particle_Cresent:SetAttribute('EmitDelay', 0)
+        particle_Cresent:SetAttribute('EmitCount', 5)
+        particle_Cresent.FlipbookFramerate = NumberRange.new(1, 1)
+        -- FlipbookLayout is not valid or is None, skipping
+        particle_Cresent.FlipbookMode = Enum.ParticleFlipbookMode.Loop
+        particle_Cresent.Parent = newAttachment
+        Part.Parent = workspace
+        local rightArm = char:WaitForChild("Right Arm")
+        local weld = Instance.new("Weld")
+        weld.Part0 = hrp
+        weld.Part1 = Part
+        local offset = CFrame.new(0, 0, -7.5) * CFrame.Angles(0, math.rad(180), 0)
+        weld.C0 = offset
+        weld.Parent = hrp
+        for i, v in pairs(Part:GetDescendants()) do
+            if v:IsA("ParticleEmitter") then
+                v:SetAttribute("EmitCount", v:GetAttribute("EmitCount") / 5)
+            end
+        end
+        local yesdo = true
+        spawn(function()
+            while yesdo == true do
+                Emit(Part)
+                task.wait(0.2)
+            end
+        end)
+        task.wait(1.5)
+        yesdo = false
+        task.wait(3.5)
+        Part:Destroy()

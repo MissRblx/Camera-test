@@ -1,3 +1,11 @@
+local hrp = char:WaitForChild("HumanoidRootPart")
+        local Part = Instance.new('Part')
+        Part.Name = 'Barrage'
+        Part.Size = Vector3.new(2, 2, 1)
+        Part.Color = Color3.new(0.384314, 0.368627, 0.384314)
+        Part.Transparency = 1
+        Part.Anchored = false
+        Part.CanCollide = false
 local newAttachment = Instance.new('Attachment')
         newAttachment.Name = 'Attachment'
         newAttachment.Position = Vector3.new(0, 0, 0)

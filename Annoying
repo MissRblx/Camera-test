@@ -57,7 +57,7 @@ local function createMangaText(parent, text)
     return billboardGui
 end
 
-local rightText = createMangaText(cinematicGui, "YOU'RE SUCH AN ANNOYING BRAT")
+local rightText = createMangaText(cinematicGui, "KNOW YOUR PLACE, FOOL!!")
 
 rightText.Enabled = false
 
@@ -73,7 +73,7 @@ RunService.RenderStepped:Connect(updateTextOrientation)
 local soundEffect = Instance.new("Sound")
 soundEffect.SoundId = "rbxassetid://7399866274"
 soundEffect.Name = "NightmodeSound"
-soundEffect.Volume = 15  
+soundEffect.Volume = 5  
 soundEffect.Parent = SoundService
 
 local function showTextsAndPlaySound()

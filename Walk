@@ -1,0 +1,38 @@
+task.spawn(function()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
+
+    -- Create and load the first animation
+    local firstAnimationId = "rbxassetid://17269023470"
+    
+    local firstAnimation = Instance.new("Animation")
+    firstAnimation.AnimationId = firstAnimationId
+    local firstAnimationTrack = humanoid:LoadAnimation(firstAnimation)
+
+    -- Play the first animation
+    firstAnimationTrack:Play()
+
+    -- Wait for 1.5 seconds before stopping the first animation and playing the second animation
+    wait(3)
+    firstAnimationTrack:Stop()
+end)
+
+task.spawn(function()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local teleportDistance = 0.4 -- The distance to teleport forward each step
+    local teleportInterval = 0 -- Time interval between each teleport (in seconds)
+    local totalDuration = 3 -- Total duration of the teleportation (in seconds)
+
+    local timeElapsed = 0
+    local startTime = tick() -- Record the start time
+
+    while timeElapsed < totalDuration do
+        humanoidRootPart.CFrame = humanoidRootPart.CFrame * CFrame.new(0, 0, -teleportDistance)
+        wait(teleportInterval)
+        timeElapsed = tick() - startTime -- Update the elapsed time
+    end
+end)

@@ -4,10 +4,10 @@ local character = player.Character or player.CharacterAdded:Wait()
 character:WaitForChild("HumanoidRootPart")
 
 local duration = 1
-local interval = 0.1
+local interval = 0.5
 local steps = duration / interval
 
 for i = 1, steps do
-    character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 0)
+    character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -20)
     wait(interval)
 end

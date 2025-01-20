@@ -1,0 +1,53 @@
+local player = game.Players.LocalPlayer
+
+    -- Load the shrine (Folder)
+    local assetId = 16639433873
+    local shrine = game:GetObjects("rbxassetid://" .. assetId)[1]
+
+    -- Ensure the shrine was loaded properly
+    if shrine then
+        local character = player.Character or player.CharacterAdded:Wait()
+        
+        if character then
+            local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+            
+            if humanoidRootPart then
+                shrine.Parent = game.Workspace
+                local startCFrame = humanoidRootPart.CFrame * CFrame.new(0, -60, 25)
+                local targetCFrame = humanoidRootPart.CFrame * CFrame.new(0, 0.5, 25)
+                local targetCFrame2 = humanoidRootPart.CFrame * CFrame.new(0, -55, 25)  -- New target position
+
+                local TweenService = game:GetService("TweenService")
+                local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+                local tweenInfo2 = TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+
+                for _, part in pairs(shrine:GetDescendants()) do
+                    if part:IsA("BasePart") then
+                        part.CanCollide = false
+                        part.Anchored = false
+                        part.CFrame = startCFrame
+                        
+                        local goal = { CFrame = targetCFrame }
+                        local goal2 = { CFrame = targetCFrame2 }
+                        local tween = TweenService:Create(part, tweenInfo, goal)
+                        local tween2 = TweenService:Create(part, tweenInfo2, goal2)
+                        
+                        tween:Play()
+                        
+                        -- Anchor the part after the first tween animation completes
+                        tween.Completed:Connect(function()
+                            part.Anchored = true
+                            wait(22)  -- Wait for 5 seconds
+                            part.Anchored = false
+                            tween2:Play()
+                        end)
+
+                        -- Anchor the part after the second tween animation completes
+                        tween2.Completed:Connect(function()
+                            part.Anchored = true
+                        end)
+                    end
+                end
+            end
+        end
+    end
